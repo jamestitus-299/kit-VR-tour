@@ -6,6 +6,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import './styles.css'
 import display from './kit2.glb';
+import kit from './kit.jpg'
 
 extend({ OrbitControls })
 
@@ -17,7 +18,7 @@ function Controls(props) {
 }
 
 function Dome() {
-  const texture = useLoader(THREE.TextureLoader, '/kit.jpg')
+  const texture = useLoader(THREE.TextureLoader, kit)
   return (
     <mesh>
       <sphereBufferGeometry attach="geometry" args={[500, 60, 40]} />
